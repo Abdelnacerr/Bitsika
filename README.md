@@ -1,2 +1,3 @@
 # Bitsika
-Bitsika App redesign Challenge
+
+Bitsika App redesign Challenge.
