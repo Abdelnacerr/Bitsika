@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import LandingPage from "./Screens/landingPage";
+import AddButton from "./Screens/AddButton";
 import SettingsScreen from "./Screens/SettingsScreen";
 
 const Tab = createBottomTabNavigator();
@@ -17,6 +18,7 @@ export default function App() {
         </Tab.Navigator>
       </NavigationContainer> */}
       <LandingPage />
+      {/* <AddButton /> */}
     </>
   );
 }
