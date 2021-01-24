@@ -2,7 +2,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import LandingPage from "./Screens/landingPage";
+import HomeScreen from "./Screens/HomeScreen";
 import AddButton from "./Screens/AddButton";
 import SettingsScreen from "./Screens/SettingsScreen";
 
@@ -17,7 +17,7 @@ export default function App() {
           <Tab.Screen name="Settings" component={SettingsScreen} />
         </Tab.Navigator>
       </NavigationContainer> */}
-      <LandingPage />
+      <HomeScreen />
       {/* <AddButton /> */}
     </>
   );
