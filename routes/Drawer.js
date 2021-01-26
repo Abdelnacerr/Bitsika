@@ -15,8 +15,8 @@ export default function drawer() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen
-          name="Tabs"
-          component={Tabs}
+          name="Home"
+          component={HomeScreen}
           options={{
             drawerIcon: ({ focused, size }) => (
               <Ionicons

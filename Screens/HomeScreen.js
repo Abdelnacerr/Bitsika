@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
+import AddButton from "./AddButton";
 
 import {
   StyleSheet,
@@ -40,12 +41,12 @@ function HomeScreen({ navigation }) {
     // navigation.push("Settings");
   };
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      automaticallyAdjustContentInsets={false}
-      bounces={true}
-    >
-      <ImageBackground source={image} style={styles.image}>
+    <ImageBackground source={image} style={styles.image}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        automaticallyAdjustContentInsets={false}
+        bounces={true}
+      >
         <Text style={styles.title}>Hello ${title}</Text>
 
         <FlatList
@@ -86,11 +87,11 @@ function HomeScreen({ navigation }) {
             </TouchableOpacity>
           )}
         />
-        <View style={styles.blackContainer}>
-          <View style={styles.whiteContainer}></View>
-        </View>
-      </ImageBackground>
-    </ScrollView>
+      </ScrollView>
+      <View style={styles.buttonContainer}>
+        <AddButton />
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -98,7 +99,6 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    // justifyContent: 'flex-end',
   },
   title: {
     fontSize: 26,
@@ -132,13 +132,22 @@ const styles = StyleSheet.create({
 
   whiteContainer: {
     width: windowWidth,
-    height: windowHeight / 2,
+    alignItems: "center",
+    justifyContent: "flex-end",
+    height: 100,
+    alignSelf: "flex-end",
+    bottom: 3,
     backgroundColor: "white",
     borderTopRightRadius: 60,
     borderTopLeftRadius: 60,
-    justifyContent: "flex-end",
   },
-
+  buttonContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    // bottom: 0,
+    // backgroundColor: 'white'
+  },
   textStyle: {
     color: "white",
   },
