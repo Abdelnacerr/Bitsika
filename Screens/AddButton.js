@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
     shadowColor: "#F02A4B",
     shadowOpacity: 0.3,
     shadowOffset: { height: 10 },
+    left: "-7%",
   },
   menu: {
     backgroundColor: "white",

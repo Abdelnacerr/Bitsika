@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import AddButton from "./AddButton";
+import Bankcards from './bankcards'
 
 import {
   StyleSheet,
@@ -27,10 +28,7 @@ const windowHeight = Dimensions.get("screen").height;
 const title = "Greg";
 
 function HomeScreen({ navigation }) {
-  const [cards, setcards] = useState([
-    { src: require("../assets/visa.jpg"), id: "1" },
-    { src: require("../assets/visa.jpg"), id: "2" },
-  ]);
+  
   const [buttonList, setbuttonList] = useState([
     { id: "1", title: "Pay Out" },
     { id: "2", title: "Top Up" },
@@ -49,28 +47,7 @@ function HomeScreen({ navigation }) {
       >
         <Text style={styles.title}>Hello ${title}</Text>
 
-        <FlatList
-          horizontal={true}
-          bounces={false}
-          showsHorizontalScrollIndicator={false}
-          data={cards}
-          renderItem={({ item }) => (
-            <TouchableOpacity>
-              <Image
-                source={item.src} // Use item to set the image source
-                style={{
-                  width: 280,
-                  height: 180,
-                  borderWidth: 2,
-                  resizeMode: "cover",
-                  left: 26,
-                  margin: 8,
-                  borderRadius: 28,
-                }}
-              />
-            </TouchableOpacity>
-          )}
-        />
+        <Bankcards />
 
         <FlatList
           idExtractor={(item) => item.id}
