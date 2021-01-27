@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import AddButton from "./AddButton";
-import Bankcards from './bankcards'
+import Bankcards from "./bankcards";
 
 import {
   StyleSheet,
@@ -28,7 +28,6 @@ const windowHeight = Dimensions.get("screen").height;
 const title = "Greg";
 
 function HomeScreen({ navigation }) {
-  
   const [buttonList, setbuttonList] = useState([
     { id: "1", title: "Pay Out" },
     { id: "2", title: "Top Up" },
@@ -97,33 +96,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
 
-  blackContainer: {
-    backgroundColor: "black",
-    width: windowWidth,
-    height: windowHeight / 1.65,
-    borderTopRightRadius: 60,
-    justifyContent: "flex-end",
-    borderTopLeftRadius: 60,
-    borderBottomColor: "grey",
-  },
-
-  whiteContainer: {
-    width: windowWidth,
-    alignItems: "center",
-    justifyContent: "flex-end",
-    height: 100,
-    alignSelf: "flex-end",
-    bottom: 3,
-    backgroundColor: "white",
-    borderTopRightRadius: 60,
-    borderTopLeftRadius: 60,
-  },
   buttonContainer: {
-    flex: 1,
+    justifyContent: "space-around",
     alignItems: "center",
-    justifyContent: "center",
-    // bottom: 0,
-    // backgroundColor: 'white'
+    height: windowHeight / 2,
+    backgroundColor: "black",
   },
   textStyle: {
     color: "white",

@@ -16,7 +16,7 @@ export default function bankcards() {
       bounces={false}
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={{
-          paddingHorizontal: 8
+        paddingHorizontal: 8,
       }}
       acelerationRate="fast"
       onScroll={Animated.event(
@@ -33,18 +33,17 @@ export default function bankcards() {
         ];
         const opacity = scrollX.interpolate({
           inputRange,
-          outputRange: [0.4, 1, .4],
+          outputRange: [0.4, 1, 0.4],
         });
         const scale = scrollX.interpolate({
           inputRange,
-          outputRange: [0.7, 1, .7],
+          outputRange: [0.7, 1, 0.7],
         });
         return (
           <TouchableOpacity>
             <Animated.Image
               source={item.src} // Use item to set the image source
-              style={[styles.image, { transform: 
-                [{scale}] }]}
+              style={[styles.image, { transform: [{ scale }] }]}
             />
           </TouchableOpacity>
         );
