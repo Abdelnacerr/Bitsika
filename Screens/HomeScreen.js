@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     height: windowHeight / 2,
-    backgroundColor: "black",
   },
   textStyle: {
     color: "white",
